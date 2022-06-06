@@ -11,23 +11,13 @@ const Header = () => {
   return (
     <div className={`BorderBottom ${styles.Container}`}>
       <div className={`HeaderImageWrapper ${styles.LogoWrapper}`}>
-        {theme === "Light" ? (
-          <Image
-            className="HeaderImage"
-            src="/logoDay.svg"
-            alt="mobilekya logo"
-            width={120}
-            height={100}
-          />
-        ) : (
-          <Image
-            className="HeaderImage"
-            src="/logoDark.svg"
-            alt="mobilekya logo"
-            width={120}
-            height={100}
-          />
-        )}
+        <Image
+          className="HeaderImage"
+          src={theme === "Light" ? "/LogoDay.svg" : "/logoDark.svg"}
+          alt="mobilekya logo"
+          width={120}
+          height={100}
+        />
       </div>
       <div className={styles.SearchWrapper}>
         <Search
@@ -38,64 +28,34 @@ const Header = () => {
         />
       </div>
       <div className={`HeaderImageWrapper ${styles.LogWrapper}`}>
-        {theme === "Light" ? (
-          <Image
-            className="HeaderImage"
-            src="/log.svg"
-            alt="log"
-            width={20}
-            height={20}
-          />
-        ) : (
-          <Image
-            className="HeaderImage"
-            src="/logDark.svg"
-            alt="log"
-            width={20}
-            height={20}
-          />
-        )}
+        <Image
+          className="HeaderImage"
+          src={theme === "Light" ? "/log.svg" : "/logDark.svg"}
+          alt="log"
+          width={20}
+          height={20}
+        />
       </div>
       <div className={`HeaderImageWrapper ${styles.HamburgerWrapper}`}>
-        {theme === "Light" ? (
-          <Image
-            className="HeaderImage"
-            src="/hamburgerDay.svg"
-            alt="mobilekya hamburger"
-            width={20}
-            height={20}
-          />
-        ) : (
-          <Image
-            className="HeaderImage"
-            src="/hamburgerDark.svg"
-            alt="mobilekya hamburger"
-            width={20}
-            height={20}
-          />
-        )}
+        <Image
+          className="HeaderImage"
+          src={theme === "Light" ? "/hamburgerDay.svg" : "/hamburgerDark.svg"}
+          alt="mobilekya hamburger"
+          width={20}
+          height={20}
+        />
       </div>
       <div
         className={`HeaderImageWrapper ${styles.DayNightWrapper}`}
         onClick={() => setTheme(theme === "Light" ? "Dark" : "Light")}
       >
-        {theme === "Light" ? (
-          <Image
-            className="HeaderImage"
-            src="/night.svg"
-            alt="night button"
-            width={20}
-            height={20}
-          />
-        ) : (
-          <Image
-            className="HeaderImage"
-            src="/dayMode.svg"
-            alt="night button"
-            width={20}
-            height={20}
-          />
-        )}
+        <Image
+          className="HeaderImage"
+          src={theme === "Light" ? "/night.svg" : "/dayMode.svg"}
+          alt="night button"
+          width={20}
+          height={20}
+        />
       </div>
     </div>
   );
