@@ -52,6 +52,9 @@ body {
   .ant-input-affix-wrapper > input {
     color: $white;
   }
+  .DarkFilter {
+    filter: brightness(0.7);
+  }
 }
 .HeaderImageWrapper {
   @include flex;

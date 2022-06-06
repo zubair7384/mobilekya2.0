@@ -2,7 +2,9 @@
 @use "../../styles/mixings" as *;
 
 $bannerHeight: 400px;
-
+$mobile-bannerHeight: 200px;
+.GradientBackLight {
+}
 .Container {
   width: 100%;
   height: $bannerHeight;
@@ -52,6 +54,10 @@ $bannerHeight: 400px;
       )
       /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
     #c2a6f1;
+  @include m-lg {
+    height: $mobile-bannerHeight;
+    margin: 12px 0;
+  }
   .Wrapper {
     position: relative;
     width: 70%;
@@ -68,9 +74,15 @@ $bannerHeight: 400px;
       justify-content: center;
       width: 100%;
       height: $bannerHeight;
+      @include m-lg {
+        height: $mobile-bannerHeight;
+      }
       .BannerImage {
         position: sticky !important;
         min-width: calc($bannerHeight + 2px) !important;
+        @include m-lg {
+          height: $mobile-bannerHeight;
+        }
       }
     }
   }
