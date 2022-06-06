@@ -1,0 +1,64 @@
+@use "./colors" as *;
+@use "./mixings" as *;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+.Light {
+  background: $background-light;
+
+  .Text {
+    color: $text-dark;
+  }
+  .Background {
+    background: $background-light;
+  }
+  .BorderBottom {
+    border-bottom: 1px solid $divider-light;
+  }
+  .anticon-search > svg {
+    color: $gray-300;
+  }
+  .ant-input-affix-wrapper > input {
+    color: $black;
+  }
+}
+.Dark {
+  background: $background-dark;
+
+  .Text {
+    color: $text-light;
+  }
+  .Background {
+    background: $background-dark;
+  }
+  .BorderBottom {
+    border-bottom: 1px solid $divider-dark;
+  }
+  .anticon-search > svg {
+    color: $gray-200;
+  }
+  .ant-input-affix-wrapper > input {
+    color: $white;
+  }
+}
+.HeaderImageWrapper {
+  @include flex;
+  .HeaderImage {
+    @include m-lg {
+      min-width: 70% !important;
+      margin: 0 !important;
+    }
+  }
+}

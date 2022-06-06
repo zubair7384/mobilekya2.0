@@ -1,0 +1,123 @@
+// Mobile Points
+
+$m_xs: 320px;
+
+$m_sm: 375px;
+
+$m_md: 430px;
+
+$m_lg: 576px;
+
+$m_xl: 768px;
+
+// Tablets Points
+
+$t_sm: 900px;
+
+$t_md: 1200px;
+
+$t_lg: 1366px;
+
+// Desktop Points
+
+$d_sm: 1600px;
+
+$d_md: 1920px;
+
+$d_lg: 2500px;
+
+// For Mobile
+
+@mixin m_xs {
+  @media (max-width: #{$m_xs}) {
+    @content;
+  }
+}
+@mixin m_sm {
+  @media (max-width: #{$m_sm}) {
+    @content;
+  }
+}
+
+@mixin m_md {
+  @media (max-width: #{$m_md}) {
+    @content;
+  }
+}
+
+@mixin m_lg {
+  @media (max-width: #{$m_lg}) {
+    @content;
+  }
+}
+@mixin m_xl {
+  @media (max-width: #{$m_xl}) {
+    @content;
+  }
+}
+
+// For Tablets
+
+@mixin t_sm {
+  @media (max-width: #{$t_sm}) {
+    @content;
+  }
+}
+
+@mixin t_md {
+  @media (max-width: #{$t_md}) {
+    @content;
+  }
+}
+
+@mixin t_lg {
+  @media (max-width: #{$t_lg}) {
+    @content;
+  }
+}
+
+// For Desktop
+
+@mixin d_sm {
+  @media (max-width: #{$d_sm}) {
+    @content;
+  }
+}
+
+@mixin d_md {
+  @media (max-width: #{$d_md}) {
+    @content;
+  }
+}
+
+@mixin d_lg {
+  @media (max-width: #{$d_lg}) {
+    @content;
+  }
+}
+
+// For any device
+
+@mixin rwd($screen) {
+  @media (max-width: ($screen+"px")) {
+    @content;
+  }
+}
+
+//Global mixings
+
+@mixin flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flex-space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin flex-space-evenly {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}

@@ -1,0 +1,79 @@
+@use "../../styles/colors" as *;
+@use "../../styles/mixings" as *;
+
+.Container {
+  width: 70%;
+  height: 87px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e5e5e5;
+  @include t-lg {
+    width: 100%;
+    padding: 0 20px;
+  }
+  @include m-lg {
+    height: 60px;
+  }
+  .SearchWrapper {
+    min-width: 80%;
+    @include d-sm {
+      min-width: 70%;
+    }
+    @include t-sm {
+      min-width: 60%;
+    }
+    @include m-lg {
+      min-width: 50%;
+      margin-left: -8%;
+    }
+    @include m-md {
+      min-width: 20%;
+      width: 40%;
+      margin-left: -10%;
+    }
+    :global {
+      .ant-input-wrapper {
+        display: flex;
+        flex-direction: row-reverse;
+        border: none !important;
+        .ant-input-affix-wrapper {
+          background-color: rgba(196, 196, 196, 0.18) !important;
+          border-radius: 5px !important;
+          border: none !important;
+          padding-left: 2rem !important;
+          &:focus {
+            box-shadow: none;
+          }
+          .ant-input {
+            background-color: transparent !important;
+            // &:placeholder {
+            //   color: red !important;
+            // }
+            @include m-lg {
+              font-size: 10px;
+            }
+          }
+        }
+        .ant-input-group-addon {
+          background: transparent;
+          left: 0 !important;
+          .ant-input-search-button {
+            border: none !important;
+            background-color: transparent !important;
+          }
+        }
+        .anticon-search > svg {
+          @include m-lg {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+  .HamburgerWrapper,
+  .DayNightWrapper {
+    cursor: pointer;
+  }
+}
